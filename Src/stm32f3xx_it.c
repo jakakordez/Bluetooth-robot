@@ -87,7 +87,16 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-
+	int32_t d = CountDistance();
+	uint8_t outputBuffer[6];
+	outputBuffer[0] = 0xAB;
+	outputBuffer[1] = (d>>24)&0xFF;
+	outputBuffer[2] = (d>>16)&0xFF;
+	outputBuffer[3] = (d>>8)&0xFF;
+	outputBuffer[4] = d&0xFF;
+	outputBuffer[5] = 0x56;
+	HAL_UART_Transmit(&huart1, outputBuffer, 6, 1000);
+	
   /* USER CODE END TIM2_IRQn 1 */
 }
 uint32_t hc = 0;

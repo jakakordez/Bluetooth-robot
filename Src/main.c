@@ -116,7 +116,10 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_2);
 	
 	__TIM3_CLK_ENABLE();
-	HAL_TIM_Base_Start_IT(&htim3);
+//	HAL_TIM_Base_Start_IT(&htim3);
+
+	__TIM2_CLK_ENABLE();
+	HAL_TIM_Base_Start_IT(&htim2);
 	
 		HAL_UART_Receive_IT(&huart1, (uint8_t *)&receiveBuffer, 1);
 		

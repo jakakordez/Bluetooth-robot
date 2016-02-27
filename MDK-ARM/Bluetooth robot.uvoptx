@@ -183,6 +183,31 @@
           <WinNumber>1</WinNumber>
           <ItemText>receiveBuffer</ItemText>
         </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>outputBuffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Distance</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>(float)(TIM1-&gt;CCR2+1)/255</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>((255/(float)(TIM1-&gt;CCR1+1))-(255/(float)(TIM1-&gt;CCR2+1))+(255/(float)(TIM8-&gt;CCR1+1))-(255/(float)(TIM8-&gt;CCR2+1)))/2</ItemText>
+        </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>(((float)(TIM1-&gt;CCR1+1)/255)-((float)(TIM1-&gt;CCR2+1)/255)+((float)(TIM8-&gt;CCR1+1)/255)-((float)(TIM8-&gt;CCR2+1))/255)/2</ItemText>
+        </Ww>
       </WatchWindow1>
       <MemoryWindow1>
         <Mm>
@@ -499,6 +524,19 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\Src\stm32f3xx_hal_msp.c</PathWithFileName>
       <FilenameWithoutPath>stm32f3xx_hal_msp.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>20</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Src\motor.c</PathWithFileName>
+      <FilenameWithoutPath>motor.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
